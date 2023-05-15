@@ -4,12 +4,14 @@
 # http://zetcode.com/gui/tkinter/dialogs/
 
 # 引入Tkinter
-from Tkinter import *
-import os, sys, glob, shutil, datetime, re, codecs, tkFont, tkFileDialog, tkMessageBox, webbrowser
+from tkinter import *
+import os, sys, glob, shutil, datetime, re, codecs, webbrowser, importlib, sys
+import tkinter.font as tkFont
+import tkinter.filedialog as tkFileDialog
+import tkinter.messagebox as tkMessageBox
 
 #fix ''ascii' codec can't decode byte 0xe8 in position ...'
-reload(sys)
-sys.setdefaultencoding('utf-8')
+importlib.reload(sys)
 
 # 定义窗口框架
 class CF(Frame) :

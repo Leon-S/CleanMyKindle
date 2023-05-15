@@ -239,7 +239,7 @@ class CF(Frame) :
 								if found == False:
 									try:
 										shutil.rmtree(unsdr)
-									except OSError, (errno, strerror):
+									except (OSError, ValueError):
 										sdr_f_count += 1
 										sdr_list_f += u'\u25cf ' + unsdr +'\n'
 									else:
@@ -313,7 +313,7 @@ class CF(Frame) :
 								if found == False:
 									try:
 										shutil.rmtree(undir)
-									except OSError, (errno, strerror):
+									except (OSError, ValueError):
 										dir_f_count += 1
 										dir_list_f += u'\u25cf ' + undir +'\n'
 									else:
